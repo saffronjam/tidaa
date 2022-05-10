@@ -1,0 +1,4 @@
+x-special/nautilus-clipboard
+cut
+file:///home/viesa/VirtualBox%20VMs/lab4_1.asm
+file:///home/viesa/VirtualBox%20VMs/lab4_2.asm

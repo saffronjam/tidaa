@@ -1,0 +1,46 @@
+<resources>
+    <string-array name="time_entries">
+        <item>1 seconds</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+        <item>5 seconds</item>
+    </string-array>
+
+    <string-array name="time_values">
+        <item>seconds_1</item>
+        <item>seconds_2</item>
+        <item>seconds_3</item>
+        <item>seconds_4</item>
+        <item>seconds_5</item>
+    </string-array>
+
+    <string-array name="rounds_entries">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="rounds_values">
+        <item>rounds_10</item>
+        <item>rounds_15</item>
+        <item>rounds_20</item>
+        <item>rounds_25</item>
+        <item>rounds_30</item>
+    </string-array>
+    <string-array name="nBack_entries">
+        <item>1 back</item>
+        <item>2 back</item>
+        <item>3 back</item>
+        <item>4 back</item>
+        <item>5 back</item>
+    </string-array>
+    <string-array name="nBack_values">
+        <item>nback_1</item>
+        <item>nback_2</item>
+        <item>nback_3</item>
+        <item>nback_4</item>
+        <item>nback_5</item>
+    </string-array>
+</resources>

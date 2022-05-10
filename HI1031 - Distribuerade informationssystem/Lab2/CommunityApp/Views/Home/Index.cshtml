@@ -1,0 +1,12 @@
+﻿@model CommunityApp.ViewModels.IndexUserVM
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h4 class="display-1">Welcome @Model.Username</h4>
+    <p><b>Last login:</b> @Model.LastLogin.ToString()</p>
+    <p><b>Login count:</b> @Model.LoginCount</p>
+    <p><b>Unread count:</b> @Model.UnreadCount</p>
+</div>

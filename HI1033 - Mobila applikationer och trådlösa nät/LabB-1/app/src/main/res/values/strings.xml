@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">WeatherThreePointO</string>
+    <string name="date">DATE</string>
+    <string name="degrees">DEGREES</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_weather">Forecast</string>
+
+    <!-- Preference Titles -->
+    <string name="sync_header">Sync</string>
+
+    <!-- Sync Preferences -->
+    <string name="refresh_timer">Refresh timer</string>
+
+    <string name="app_title">Weather Three.0</string>
+    <string name="favorites">Favorites</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="location">Location</string>
+    <string name="sample">SAMPLE</string>
+    <string name="city">Please chose a location</string>
+    <string name="wind">WIND</string>
+    <string name="cloud">CLOUD</string>
+    <string name="settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="makefavorite">makeFavorite</string>
+    <string name="last_update">LAST UPDATE</string>
+</resources>

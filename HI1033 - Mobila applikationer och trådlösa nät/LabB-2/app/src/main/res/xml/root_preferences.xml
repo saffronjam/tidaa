@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/settings">
+
+        <ListPreference
+            app:defaultValue="rounds_10"
+            app:entries="@array/rounds_entries"
+            app:entryValues="@array/rounds_values"
+            app:key="rounds"
+            app:title="@string/rounds_settings"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            app:key="visual_stim"
+            app:title="Visual stimuli" />
+        <CheckBoxPreference
+            app:key="audio_stim"
+            app:title="Audio stimuli" />
+
+        <ListPreference
+            app:defaultValue="seconds_3"
+            app:entries="@array/time_entries"
+            app:entryValues="@array/time_values"
+            app:key="seconds"
+            app:title="@string/secounds_settings"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="nback_2"
+            app:entries="@array/nBack_entries"
+            app:entryValues="@array/nBack_values"
+            app:key="nback"
+            app:title="@string/n_back_setting"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,29 @@
+version: '3.4'
+services:
+    vertx-db:
+        container_name: vertx-database
+        platform: linux/x86_64
+        image: mongo
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: user
+            MONGO_INITDB_ROOT_PASSWORD: password
+
+        ports:
+            - '27019:27017'
+
+    vertx-ms:
+        container_name: vertx-server
+        platform: linux/x86_64
+
+        build:
+            context: ./
+            dockerfile: Dockerfile
+
+        links:
+            - vertx-db
+        ports:
+            - '8086:8086'
+
+        depends_on:
+            - vertx-db
+

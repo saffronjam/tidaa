@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CourseFragment">
+
+    <LinearLayout
+        android:id="@+id/searchFieldLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/card_drawable"
+            app:boxStrokeColor="@color/white"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Search"
+                android:importantForAutofill="no"
+                android:inputType="textFilter|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingVertical="15dp"
+                android:textAlignment="center"
+                android:textSize="25sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchFieldLinearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

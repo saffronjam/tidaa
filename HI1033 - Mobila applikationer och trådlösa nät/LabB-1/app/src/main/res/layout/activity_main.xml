@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WeatherDisplayActivity">
+
+    <ProgressBar
+        android:id="@+id/idWeatherProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/idLinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/idActiviyNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/idFavoriteListActivityButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="@string/favorites" />
+
+            <Button
+                android:id="@+id/idSearchActitvityButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                android:text="@string/search" />
+
+            <Button
+                android:id="@+id/idSettingsActivityButton"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:text="@string/settings" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/idCityDisplayFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idActiviyNav"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/idFavoriteButton"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/makefavorite"
+                android:src="@drawable/star_filled"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/idCityDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="@string/city"
+                android:textAlignment="center"
+                android:textSize="35sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idLastUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idCityDisplayFav"
+            android:gravity="center"
+            android:text="@string/last_update" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idLinLayout"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+</RelativeLayout>

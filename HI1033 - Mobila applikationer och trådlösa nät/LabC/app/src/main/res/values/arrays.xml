@@ -1,0 +1,12 @@
+<resources>
+    <!-- Academic time -->
+    <string-array name="academicTime_entries">
+        <item>None</item>
+        <item>15 minutes</item>
+    </string-array>
+
+    <string-array name="academicTime_values">
+        <item>0</item>
+        <item>15</item>
+    </string-array>
+</resources>

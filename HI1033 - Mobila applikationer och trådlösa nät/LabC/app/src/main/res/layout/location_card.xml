@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/card_drawable">
+
+            <LinearLayout
+                android:id="@+id/topBarLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/courseIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                <TextView
+                    android:id="@+id/locationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Hälsovägen 11c"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textSize="18sp" />
+            </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

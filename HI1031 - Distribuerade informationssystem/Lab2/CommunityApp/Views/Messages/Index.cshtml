@@ -1,0 +1,65 @@
+﻿@model CommunityApp.ViewModels.MessageIndexVM
+
+@{
+    ViewData["Title"] = "Messages";
+}
+
+
+<h1>Messages</h1>
+
+<p>
+    <a asp-action="Create">Compose new message</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Senders
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="messageContainer">
+        @foreach (var item in Model.Messages)
+        {
+            <tr>
+                <td>
+                    <a asp-action="List" asp-route-id="@item.Username">
+                        @item.Username
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <p>Total received: <span id="received">@Model.TotalCount</span></p>
+    <p>Total read:     <span id="read">@Model.ReadCount</span></p>
+    <p>Total deleted:  <span id="deleted">@Model.DeletedCount</span></p>
+
+    <button type='button' class='btn btn-outline-primary' id="refresh">Refresh</button>
+
+</table>
+
+<script>
+    $("#refresh").on("click", () => {
+        $.ajax({ 
+            type: 'GET', 
+            url: "/Messages/RefreshInbox", 
+            //data: { get_param:  }, 
+            dataType: 'json',
+            success: function (data) { 
+                console.log("successs:");
+                console.log(data);
+
+                $("#messageContainer").empty();
+                data.Messages.forEach(m => {
+                    $("#messageContainer").append("<tr><td><a href=\"/Messages/List/" + m.Username + "\">" + m.Username + "</a></td></tr>");
+                });
+
+                $("#received").text(data.TotalCount);
+                $("#read").text(data.ReadCount);
+                $("#deleted").text(data.DeletedCount);
+            }
+        });
+    });
+</script>

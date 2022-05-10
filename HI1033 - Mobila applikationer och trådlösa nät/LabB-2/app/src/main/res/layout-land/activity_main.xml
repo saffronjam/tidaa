@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/totalBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity"
+    android:background="?colorOnPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/roundInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleY="4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <ImageButton
+        android:id="@+id/statsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_stats_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roundInfo" />
+
+
+    <ImageButton
+        android:id="@+id/settingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/settings"
+        android:src="@drawable/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/gameData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsBtn">
+
+        <TableLayout
+            android:id="@+id/tableNBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp">
+
+            <TableRow tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:src="@drawable/ic_n_back_28" />
+
+                <TextView
+                    android:id="@+id/back_nInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_backInfo"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TableLayout
+                android:id="@+id/tableVisual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TableRow>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/visibility_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/visualMatchInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visualMatch"
+                        android:textSize="20sp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TableLayout
+                android:id="@+id/tableAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TableRow>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:src="@drawable/hearing_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/audioMatchInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/audioMatch"
+                        android:textSize="20sp" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@id/gameSqr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@id/audioBtn"
+        app:layout_constraintStart_toEndOf="@id/visualBtn"
+        app:layout_constraintTop_toBottomOf="@id/roundInfo">
+        <!-- NB! switch between wrap_content/fill_parent
+             for the layout_width and height in landscape mode -->
+        <com.kth.labbB.nback.SquareLayout
+            android:id="@+id/squareLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/layout_border_bkg"
+            android:orientation="vertical"
+            android:padding="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- images of the grid boxes -->
+                <!-- using tags to identify in activity -->
+                <ImageView
+                    android:id="@+id/imageView0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="0" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="1" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="3" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="4" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="6" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="7" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/img_boarder_bkg"
+                    android:padding="20dp"
+                    android:tag="8" />
+            </LinearLayout>
+
+        </com.kth.labbB.nback.SquareLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/actionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_your_try" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- Styling for the button is defined in res/drawable/rounded_green_bkg
+     Use AppCompatButton, instead of Button, for this styling to take effect -->
+    <Button
+        android:id="@+id/visualBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_blue_bkg"
+        android:enabled="false"
+        android:text="@string/visual_match"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/squareLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/audioBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_blue_bkg"
+        android:enabled="false"
+        android:text="@string/audio_match"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/squareLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

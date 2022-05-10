@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: post-db-pv-claim
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: post-db
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: post-db
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-db
+spec:
+  selector:
+    matchLabels:
+      app: post-db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: post-db
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: post-db
+        env:
+          # Use secret in real usage
+        - name: MYSQL_DATABASE
+          value: post-db
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_USER
+          value: user
+        - name: MYSQL_PASSWORD
+          value: password
+        ports:
+        - containerPort: 3306
+          name: post-db
+        volumeMounts:
+        - name: post-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: post-persistent-storage
+        persistentVolumeClaim:
+          claimName: post-db-pv-claim

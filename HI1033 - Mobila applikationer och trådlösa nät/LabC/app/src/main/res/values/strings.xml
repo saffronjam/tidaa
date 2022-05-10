@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Wake up in time</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="prefrenses_header">Preferences</string>
+    <string name="location_header">Location</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="academic_time_title">Academic time</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_app">AppActivity</string>
+    <string name="title_course">Courses</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_travel">Travel</string>
+    <string name="dummy">dummy</string>
+    <string name="SampleCourseName">Mobila applikationer och trådlösanät</string>
+    <string name="courseimage">CourseImage</string>
+    <string name="CoursePointsSample">15hp</string>
+    <string name="SampleCourseCode">HI1024</string>
+    <string name="SampleFrom">FROM</string>
+    <string name="SampleTo">TO</string>
+    <string name="SampleBusNumber">160</string>
+    <string name="SampleDetailedInfo">Towards Gnesta</string>
+    <string name="SampleStartTime">08:15</string>
+    <string name="SampleEndTime">08:45</string>
+    <string name="PressAnywhereDismiss">Press anywhere to dismiss</string>
+    <string name="clock">clock</string>
+    <string name="SetAlarm">Set alarm</string>
+</resources>

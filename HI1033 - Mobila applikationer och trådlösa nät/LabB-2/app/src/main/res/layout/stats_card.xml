@@ -1,0 +1,83 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="4dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_n_back_28"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/back_nInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/n_backInfo" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/visibility_black_24dp"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/visualMatchCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:text="@string/visualMatch" />
+            <TextView
+                android:id="@+id/visualMatchIncorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:text="@string/visualMatch" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/hearing_black_24dp"
+                android:layout_margin="2dp"
+                />
+            <TextView
+                android:id="@+id/audioMatchCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:text="@string/audioMatch" />
+            <TextView
+                android:id="@+id/audioMatchIncorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="5dp"
+                android:text="@string/audioMatch" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+
+  cavnas-db:
+    container_name: canvas-database
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: password
+
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '27018:27017'
+
+  canvas-backend:
+    platform: linux/x86_64
+
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    depends_on:
+      - cavnas-db
+    links:
+      - cavnas-db
+
+    ports:
+      - '5000:5000'

@@ -1,0 +1,39 @@
+version: '3.4'
+services:
+  user-db:
+    container_name: user-database
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'user-db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3313:3306'
+
+    volumes:
+      - my-db:/var/lib/mysql
+
+  user-ms:
+    container_name: user-server
+    platform: linux/x86_64
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    links:
+      - user-db
+    ports:
+      - '8084:8084'
+
+    depends_on:
+      - user-db
+
+volumes:
+  my-db: null

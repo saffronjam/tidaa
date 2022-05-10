@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vertx-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vertx-ms
+  template:
+    metadata:
+      labels:
+        app: vertx-ms
+    spec:
+      containers:
+        - name: vertx-ms
+          image: vertx-ms-image
+          ports:
+            - containerPort: 8086
+              name: service-port
+          imagePullPolicy: Never

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_course"
+        android:icon="@drawable/ic_baseline_library_books_24"
+        android:title="@string/title_course" />
+
+    <item
+        android:id="@+id/navigation_schedule"
+        android:icon="@drawable/ic_baseline_calendar_month_24"
+        android:title="@string/title_schedule" />
+
+    <item
+        android:id="@+id/navigation_travel"
+        android:icon="@drawable/ic_baseline_directions_bus_24"
+        android:title="@string/title_travel" />
+
+</menu>

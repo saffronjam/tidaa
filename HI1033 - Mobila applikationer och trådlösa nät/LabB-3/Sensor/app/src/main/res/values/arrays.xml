@@ -1,0 +1,19 @@
+<resources>
+    <string-array name="sensor_entries">
+        <item>Accelerometer</item>
+        <item>Gyroscope</item>
+        <item>IMU6</item>
+    </string-array>
+
+    <string-array name="freq_entries">
+        <item>13 Hz</item>
+        <item>26 Hz</item>
+        <item>52 Hz</item>
+    </string-array>
+
+    <string-array name="freq_values">
+        <item>Hz13</item>
+        <item>Hz26</item>
+        <item>Hz52</item>
+    </string-array>
+</resources>

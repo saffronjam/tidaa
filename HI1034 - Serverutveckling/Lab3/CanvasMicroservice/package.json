@@ -1,0 +1,21 @@
+{
+  "name": "canvas-ms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env REACT_APP_HEROKU=false node index.js",
+    "startHeroku": "cross-env REACT_APP_HEROKU=true node index.js",
+    "test": "echo Error: no test specified"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "express-ws": "^5.0.2",
+    "mongodb": "^4.2.1"
+  }
+}

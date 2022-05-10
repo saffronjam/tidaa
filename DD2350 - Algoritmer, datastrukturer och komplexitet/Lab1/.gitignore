@@ -1,0 +1,9 @@
+korpus
+.idea/*
+.idea
+target
+.idea/modules.xml
+.idea/Labb1ADKJava.iml
+.DS_Store
+src/main/resources/rawindex.txt
+src/main/resources/korpus_big

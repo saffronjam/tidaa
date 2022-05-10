@@ -1,0 +1,4 @@
+Lamp1 8 15
+Lamp2 9 10
+Lamp2 9 10
+Lamp2 11 12

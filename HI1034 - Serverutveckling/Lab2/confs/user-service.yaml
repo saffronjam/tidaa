@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user-ms
+  template:
+    metadata:
+      labels:
+        app: user-ms
+    spec:
+      containers:
+        - name: user-ms
+          image: user-ms-image
+          ports:
+            - containerPort: 8084
+              name: service-port
+          imagePullPolicy: Never

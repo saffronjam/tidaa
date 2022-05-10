@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="cardBackgroundColor" format="reference|color" />
+    <attr name="cardBackgroundColorAlt" format="reference|color" />
+    <attr name="cardShadowColorPrimary" format="reference|color" />
+    <attr name="cardShadowColorSecondary" format="reference|color" />
+    <attr name="appBackground" format="reference|color" />
+
+</resources>

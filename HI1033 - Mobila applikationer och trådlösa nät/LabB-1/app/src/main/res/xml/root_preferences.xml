@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/sync_header">
+        <ListPreference
+            app:defaultValue="minutes_5"
+            app:entries="@array/refresh_entries"
+            app:entryValues="@array/refresh_values"
+            app:key="refresh_timer"
+            app:title="@string/refresh_timer"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

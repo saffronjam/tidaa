@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activities.StatsActivity">
+<Button
+    android:id="@+id/clearBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="Clear"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/statsRecyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_constraintTop_toBottomOf="@+id/clearBtn"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

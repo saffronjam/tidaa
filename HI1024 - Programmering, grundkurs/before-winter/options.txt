@@ -1,0 +1,30 @@
+1UP= 82
+1DOWN= 81
+1RIGHT= 79
+1LEFT= 80
+
+2UP= 26
+2DOWN= 22
+2RIGHT= 7
+2LEFT= 4
+
+SpawnAnimal= 10
+inventory= 8
+shop= 9
+harvestTemp= 14
+meny= 41
+action= 44
+Select= 40
+quickSlot1= 30
+quickSlot2= 31
+quickSlot3= 32
+quickSlot4= 33
+quickSlot5= 34
+quickSlot6= 35
+quickSlot7= 36
+quickSlot8= 37
+quickSlot9= 38
+quickSlot0= 39
+The Window
+WINDOW_WIDTH= 1280
+WINDOW_HEIGHT= 750

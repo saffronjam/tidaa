@@ -1,0 +1,7 @@
+include/SDL2/*
+lib/*
+.vscode/*
+*.dll
+*.exe
+*.out
+*.code-workspace

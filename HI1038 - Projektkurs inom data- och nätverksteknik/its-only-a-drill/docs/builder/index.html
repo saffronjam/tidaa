@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>It's Only a Drill - Level builder</title>
+    <link rel=icon href=favicon.png type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/836f06798d.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/dark-hive/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(document).tooltip({
+                show: false,
+                hide: false
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div id="sidebar">
+        <div id="layers" class="sidebar-box">
+            <h3>Layers</h3>
+            <div id="layers-container"></div>
+        </div>
+        <div id="tiles" class="sidebar-box">
+            <h3>Tiles</h3>
+            <div id="tile-container"></div>
+        </div>
+
+        <div id="tools" class="sidebar-box">
+            <h3>Tools</h3>
+            <div id="tool-container">
+                <button id="mapOptions-btn" class="tool-buttons" title="View map options" onclick="showMapInfo()">
+                    &nbsp;<i class="fas fa-cogs"></i>&nbsp;
+                </button>
+
+                <button id="sync" onclick="update()" title="Refresh" class="tool-buttons">
+                    &nbsp;<i class="fas fa-sync-alt"></i>&nbsp;
+                </button>
+
+                <button id="snapToGrid" title="Snap to grid" class="tool-buttons">
+                    <label for="snapCheckBox"><i class="fas fa-ruler-combined"></i></label>
+                    <input id="snapCheckBox" type="checkbox" checked>
+                </button>
+
+                <input type="file" id="files" name="file" style="display: none;" />
+                <button class="tool-buttons" title="Open folder"
+                    onclick="document.getElementById('files').click();$('#upld-btn').show()">
+                    &nbsp;<i class='fas fa-folder-open'></i>&nbsp;
+                </button>
+
+                <button id="upld-btn" class="tool-buttons" title="Upload file" style="display: none;"
+                    onclick="readBlob()">
+                    &nbsp;<i class="fas fa-upload"></i>&nbsp;
+                </button>
+
+                <button id="dwnld-btn" class="tool-buttons" title="Download current map" onclick="outputJSON()">
+                    &nbsp;<i class="fas fa-download"></i>&nbsp;
+                </button>
+
+                <button id="center-btn" class="tool-buttons" title="Center canvas" onclick="centerCanvas()">
+                    &nbsp;<i class="fas fa-crosshairs"></i></i>&nbsp;
+                </button>
+
+                <!-- Default settings for tile dropping -->
+
+                <button id="defaultMass" title="Default mass" class="tool-buttons">
+                    <label for="defaultMassInput"><i class="fas fa-weight-hanging"></i></label>
+                    <input class="tool-input" id="defaultMassInput" type="text" value="1000">
+                </button>
+
+                <button id="defaultCollider" title="Default collider" class="tool-buttons">
+                    <label for="defaultColliderInput"><i class="fas fa-car-crash"></i></label>
+                    <input class="tool-input" id="defaultColliderInput" type="text" value="0">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mapInfoContainer" style="display: none;">
+        <label for="mapNameInput">Map name</label>
+        <br>
+        <input class="mapinfo-input" id="mapNameInput" type="text">
+        <br>
+        <br>
+
+        <label for="difficultyInput">Difficulty</label>
+        <br>
+        <input class="mapinfo-input" id="difficultyInput" type="text">
+        <br>
+        <br>
+
+        <label for="maxPlayersInput">Max players</label>
+        <br>
+        <input class="mapinfo-input" id="maxPlayersInput" type="text" readonly>
+        <br>
+        <br>
+
+        <label for="maxBotsInput">Max bots</label>
+        <br>
+        <input class="mapinfo-input" id="maxBotsInput" type="text" readonly>
+        <br>
+        <br>
+
+        <label for="uidInput">Unique Identifier</label>
+        <br>
+        <input class="mapinfo-input" id="uidInput" type="text" readonly>
+        <br><br>
+        <br>
+        <button id="mapInfoSave" onclick="saveMapInfo()">Save changes</button>
+
+    </div>
+
+
+
+    <div id="spritesheet_container" style="display: none;">
+        <img id="background-tiles-sheet" src="../spritesheets/background-tiles.png">
+    </div>
+    <p id="byte_content" style="display: none;"></p>
+
+    <!-- Import JS files -->
+    <script src="js/main.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/files.js"></script>
+    <script src="js/frontend.js"></script>
+</body>
+
+</html>
+
+<!--
+    json
+
+    "thing"
+    x, 
+    y,
+    width,
+    height,
+    mass,
+    collider,
+    rot
+
+    To do:
+    custom rektanglar
+-->

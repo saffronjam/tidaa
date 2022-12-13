@@ -1,0 +1,6 @@
+export const CHAT_MS_IP = 'http://localhost:8081'
+export const IMAGE_MS_IP = 'http://localhost:8082'
+export const POST_MS_IP = 'http://localhost:8083'
+export const USER_MS_IP = 'http://localhost:8084'
+export const VERTX_MS_IP = 'http://localhost:8086'
+export const CANVAS_MS_WS_IP = 'ws://localhost:5000'

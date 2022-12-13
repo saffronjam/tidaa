@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: post-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: post-ms
+  template:
+    metadata:
+      labels:
+        app: post-ms
+    spec:
+      containers:
+        - name: post-ms
+          image: post-ms-image
+          ports:
+            - containerPort: 8083
+              name: service-port
+          imagePullPolicy: Never

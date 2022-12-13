@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: user-db-pv-claim
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-db
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: user-db
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-db
+spec:
+  selector:
+    matchLabels:
+      app: user-db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: user-db
+    spec:
+      containers:
+      - image: mysql:5.6
+        name: user-db
+        env:
+          # Use secret in real usage
+        - name: MYSQL_DATABASE
+          value: user-db
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        - name: MYSQL_USER
+          value: user
+        - name: MYSQL_PASSWORD
+          value: password
+        ports:
+        - containerPort: 3306
+          name: user-db
+        volumeMounts:
+        - name: user-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: user-persistent-storage
+        persistentVolumeClaim:
+          claimName: user-db-pv-claim

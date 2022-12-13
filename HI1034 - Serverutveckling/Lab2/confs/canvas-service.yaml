@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: canvas-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: canvas-ms
+  template:
+    metadata:
+      labels:
+        app: canvas-ms
+    spec:
+      containers:
+        - name: canvas-ms
+          image: canvas-ms-image
+          ports:
+            - containerPort: 5000
+              name: service-port
+          imagePullPolicy: Never

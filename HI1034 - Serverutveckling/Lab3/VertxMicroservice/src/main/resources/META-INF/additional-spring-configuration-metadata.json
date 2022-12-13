@@ -1,0 +1,48 @@
+{
+  "groups": [
+    {
+      "name": "ip",
+      "type": "com.serverlabb2.utilities.Ip",
+      "sourceType": "com.serverlabb2.utilities.Ip"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.chatMs",
+      "type": "java.lang.String",
+      "sourceType": "com.serverlabb2.utilities.Ip$chatMs",
+      "defaultValue": "UNDEFINED"
+    },
+    {
+      "name": "app.image",
+      "type": "java.lang.String",
+      "sourceType": "com.serverlabb2.utilities.Ip$imageMs",
+      "defaultValue": "UNDEFINED"
+    },
+    {
+      "name": "app.post",
+      "type": "java.lang.String",
+      "sourceType": "com.serverlabb2.utilities.Ip$postMs",
+      "defaultValue": "UNDEFINED"
+    },
+    {
+      "name": "app.user",
+      "type": "java.lang.String",
+      "sourceType": "com.serverlabb2.utilities.Ip$userMs",
+      "defaultValue": "UNDEFINED"
+    },
+    {
+      "name": "app.vertx",
+      "type": "java.lang.String",
+      "sourceType": "com.serverlabb2.utilities.Ip$vertxMs",
+      "defaultValue": "UNDEFINED"
+    },
+    {
+      "name": "app.canvas",
+      "type": "java.lang.String",
+      "sourceType": "com.serverlabb2.utilities.Ip$canvasMs",
+      "defaultValue": "UNDEFINED"
+    }
+  ],
+  "hints": []
+}

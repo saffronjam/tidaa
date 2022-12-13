@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chat-ms
+  template:
+    metadata:
+      labels:
+        app: chat-ms
+    spec:
+      containers:
+        - name: chat-ms
+          image: chat-ms-image
+          ports:
+            - containerPort: 8081
+              name: service-port
+          imagePullPolicy: Never

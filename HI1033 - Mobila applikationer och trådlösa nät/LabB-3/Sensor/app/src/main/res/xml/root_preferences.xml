@@ -1,0 +1,20 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Preferences">
+        <ListPreference
+            app:defaultValue="IMU6"
+            app:entries="@array/sensor_entries"
+            app:entryValues="@array/sensor_entries"
+            app:key="sensor"
+            app:title="Sensor" />
+
+        <ListPreference
+            app:defaultValue="Hz13"
+            app:entries="@array/freq_entries"
+            app:entryValues="@array/freq_values"
+            app:key="freq"
+            app:title="Frequency" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

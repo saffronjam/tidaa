@@ -1,0 +1,11 @@
+ViewModel är bara modeller som används av ASP MVC controllern
+För högre betyg måste alla tre lager vara hårt separerade (ingen context)
+
+[HttpPost] för controller
+[ValidateAntiForgeryToken] + @Html.AntiForgeryToken()
+
+Viewmodel namn ex. MovieVM. alla har { get; set; }
+
+SelectListItem, för dropdown + @Html.DropDownList("movies")...
+
+Använd bara userId och inte hela user objektet

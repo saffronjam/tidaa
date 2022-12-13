@@ -1,0 +1,125 @@
+﻿@model CommunityApp.ViewModels.MessageForm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Message</h4>
+<hr />
+@if (Model.Confirmation.Length > 0)
+{
+    <div class="alert alert-primary" role="alert">
+        Meddelande avsänt till @Model.Confirmation
+    </div>
+}
+
+@if (Model.Error.Length > 0)
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.Error
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <textarea asp-for="Content" class="form-control" ></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>  
+            <br />
+            <div class="form-group">
+                <label asp-for="Groups" class="control-label"></label>
+                @Html.DropDownList("GroupList")
+                <input asp-for="Groups" class="form-control" />
+                <span asp-validation-for="Groups" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Receivers" class="control-label"></label>
+                @*@Html.DropDownList("UserList")*@
+                <div id="results"></div>
+                <input type="text" id="search" class="form-control" placeholder="Search for users" />
+                <input asp-for="Receivers" class="form-control" />
+                <span asp-validation-for="Receivers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+    //Search
+    $("#search").on("input", () => {
+        $("#results").empty();
+
+        //$.get("/Messages/SearchUsers?query=" + $("#search").val(), (res) => {
+        //    console.log("successs:");
+        //    console.log(res);
+        //    res.data.users.forEach(u => {
+        //        $("#results").append("<button class='resButton' id=" + u + ">" + u + "</button>");
+        //    });
+        //});
+        $.ajax({ 
+            type: 'GET', 
+            url: "/Messages/SearchUsers?query="+$("#search").val(), 
+            //data: { get_param:  }, 
+            dataType: 'json',
+            success: function (data) { 
+                console.log("successs:");
+                console.log(data);
+                data.users.forEach(u => {
+                    $("#results").append("<button type='button' class='btn btn-outline-primary' class='resButton' id=" + u + ">" + u + "</button>");
+                });
+            }
+        });
+    });
+
+    $("#results").on("click", (element) => {
+        $("#search").val("");
+        if ($("#Receivers").val() != "") {
+            $("#Receivers").val($("#Receivers").val() + "," + element.target.id);
+        } else {
+            $("#Receivers").val(element.target.id);
+        }
+    });
+
+    //Dropdowns
+    //$("#UserList").on("change", () => {
+    //    if ($("#UserList").val() != "Select a user...")
+    //        if ($("#Receivers").val() != "") {
+    //            $("#Receivers").val($("#Receivers").val() + "," + $("#UserList").val());
+    //        } else {
+    //            $("#Receivers").val($("#UserList").val());
+    //        }
+    //});
+
+    $("#GroupList").on("change", () => {
+        if ($("#GroupList").val() != "Select a group...")
+            if ($("#Groups").val() != "") {
+                $("#Groups").val($("#Groups").val() + "," + $("#GroupList").val());
+            } else {
+                $("#Groups").val($("#GroupList").val());
+            }
+    });
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

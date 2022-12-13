@@ -1,0 +1,277 @@
+{
+    "types": [
+        {
+            "name": "player_spawn",
+            "x": 16,
+            "y": 512,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "enemy_spawn",
+            "x": 80,
+            "y": 512,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "weapon1_spawn",
+            "x": 496,
+            "y": 144,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "door_horizontal",
+            "x": 193,
+            "y": 192,
+            "w": 16,
+            "h": 4
+        },
+        {
+            "name": "door_vertical",
+            "x": 194,
+            "y": 180,
+            "w": 4,
+            "h": 16
+        },
+        {
+            "name": "wall_vertical",
+            "x": 368,
+            "y": 96,
+            "w": 8,
+            "h": 16
+        },
+        {
+            "name": "wall_horizontal",
+            "x": 416,
+            "y": 96,
+            "w": 16,
+            "h": 8
+        },
+        {
+            "name": "brick_red",
+            "x": 0,
+            "y": 0,
+            "w": 32,
+            "h": 16
+        },
+        {
+            "name": "brick_green",
+            "x": 32,
+            "y": 0,
+            "w": 32,
+            "h": 16
+        },
+        {
+            "name": "brick_brown",
+            "x": 0,
+            "y": 48,
+            "w": 32,
+            "h": 16
+        },
+        {
+            "name": "brick_black",
+            "x": 32,
+            "y": 48,
+            "w": 32,
+            "h": 16
+        },
+        {
+            "name": "brick_purple",
+            "x": 64,
+            "y": 0,
+            "w": 32,
+            "h": 16
+        },
+        {
+            "name": "brick_brown_broken",
+            "x": 64,
+            "y": 96,
+            "w": 64,
+            "h": 16
+        },
+        {
+            "name": "wood_darkbrown",
+            "x": 160,
+            "y": 0,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "wood_moldy",
+            "x": 0,
+            "y": 256,
+            "w": 32,
+            "h": 16
+        },
+        {
+            "name": "wood_light",
+            "x": 176,
+            "y": 80,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "tile_white",
+            "x": 224,
+            "y": 0,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "tile_gold",
+            "x": 224,
+            "y": 32,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "tile_dark_grey",
+            "x": 224,
+            "y": 48,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "tile_pink",
+            "x": 240,
+            "y": 48,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "carpet_beige",
+            "x": 16,
+            "y": 416,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "carpet_white",
+            "x": 80,
+            "y": 336,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "carpet_brown",
+            "x": 96,
+            "y": 336,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "carpet_purple",
+            "x": 80,
+            "y": 352,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "rug_black_white",
+            "x": 288,
+            "y": 464,
+            "w": 32,
+            "h": 32
+        },
+        {
+            "name": "rug_red_white",
+            "x": 256,
+            "y": 496,
+            "w": 32,
+            "h": 32
+        },
+        {
+            "name": "marble_black_white",
+            "x": 192,
+            "y": 560,
+            "w": 32,
+            "h": 32
+        },
+        {
+            "name": "marble_pink",
+            "x": 160,
+            "y": 560,
+            "w": 32,
+            "h": 32
+        },
+        {
+            "name": "overlay_red_topleft",
+            "x": 419,
+            "y": 412,
+            "w": 24,
+            "h": 24
+        },
+        {
+            "name": "overlay_red_topright",
+            "x": 443,
+            "y": 412,
+            "w": 24,
+            "h": 24
+        },
+        {
+            "name": "overlay_red_bottomleft",
+            "x": 419,
+            "y": 436,
+            "w": 24,
+            "h": 24
+        },
+        {
+            "name": "overlay_red_bottomright",
+            "x": 443,
+            "y": 436,
+            "w": 24,
+            "h": 24
+        },
+        {
+            "name": "overlay_red_center",
+            "x": 435,
+            "y": 460,
+            "w": 24,
+            "h": 24
+        },
+        {
+            "name": "rug_oriental",
+            "x": 784,
+            "y": 176,
+            "w": 48,
+            "h": 32
+        },
+        {
+            "name": "sidewalk_slab",
+            "x": 816,
+            "y": 96,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "kitchen_floor",
+            "x": 208,
+            "y": 432,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "shinyass_tile_blue",
+            "x": 288,
+            "y": 416,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "shinyass_tile_pink",
+            "x": 272,
+            "y": 416,
+            "w": 16,
+            "h": 16
+        },
+        {
+            "name": "weird_wood_overlay",
+            "x": 752,
+            "y": 80,
+            "w": 32,
+            "h": 48
+        }
+    ]
+}

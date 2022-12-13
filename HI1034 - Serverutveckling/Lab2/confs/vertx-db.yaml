@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vertx-db-pv-claim
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vertx-db
+spec:
+  ports:
+  - port: 27017
+  selector:
+    app: vertx-db
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: vertx-db
+  name: vertx-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vertx-db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: vertx-db
+    spec:
+      containers:
+      - image: mongo
+        name: vertx-db
+        args: ["--dbpath","/data/db"]
+        volumeMounts:
+        - name: vertx-db-persistent-storage
+          mountPath: "/data/db"
+      volumes:
+      - name: vertx-db-persistent-storage
+        persistentVolumeClaim:
+          claimName: vertx-db-pv-claim

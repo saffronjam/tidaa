@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">N-Back</string>
+    <string name="audio_match">Audio match</string>
+    <string name="visual_match">Visual match</string>
+    <string name="reset">Reset</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Sync Preferences -->
+    <string name="settings">Game settings</string>
+    <string name="stimuli_settings">Stimuli</string>
+    <string name="secounds_settings">Seconds</string>
+    <string name="rounds_settings">Rounds</string>
+    <string name="visualMatch">0</string>
+    <string name="correct_visuals">Correct visuals:</string>
+    <string name="audioMatch">0</string>
+    <string name="correct_audio">Correct audio:</string>
+    <string name="roundInfo">1 of 20</string>
+    <string name="round">Round:</string>
+    <string name="simuliChooise">Visual and Audio</string>
+    <string name="type">Type:</string>
+    <string name="interval">3000 ms</string>
+    <string name="trial_time">Trial time:</string>
+    <string name="nBackSetting">2</string>
+    <string name="n_back">N-Back:</string>
+    <string name="stimuli">Stimuli</string>
+    <string name="n_back_setting">N-back</string>
+    <string name="n_backInfo">1</string>
+    <string name="Stats">Stats</string>
+    <string name="start">Start</string>
+    <string name="save_your_try">Save your try</string>
+</resources>

@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Sensor</string>
+    <string name="start_measuring">Start measuring</string>
+    <string name="stop_measuring">Stop measuring</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="no_devices_found">No devices found</string>
+    <string name="scan">Scan</string>
+    <string name="no_device_selected">No device selected</string>
+    <string name="using_device_sensors">Using device sensors</string>
+    <string name="bt_connected">Connected</string>
+    <string name="bt_disconnected">Disconnected</string>
+    <string name="bt_service_not_found">Service not found</string>
+    <string name="bt_notifications_enabled">Notifications enabled</string>
+    <string name="device_name">DEVICE_NAME</string>
+    <string name="device_data">DEVICE_DATA</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="settingsbutton">settingsbutton</string>
+
+
+
+
+
+
+
+
+
+    <string name="viewGithub">View on GitHub</string>
+    <string name="reportProblem">Problem Report</string>
+    <string name="viewWebsite">Developer Website</string>
+    <string name="actionSave">Save to Gallery</string>
+
+    <string name="animateX">Animate X</string>
+    <string name="animateY">Animate Y</string>
+    <string name="animateXY">Animate XY</string>
+
+    <string name="actionToggleValues">Toggle Values</string>
+    <string name="actionToggleYValues">Toggle Y-Values</string>
+    <string name="actionToggleXValues">Toggle X-Values</string>
+
+    <string name="actionToggleIcons">Toggle Icons</string>
+    <string name="actionToggleHighlight">Toggle Highlight</string>
+    <string name="actionTogglePinch">Toggle PinchZoom</string>
+    <string name="actionToggleAutoScale">Toggle Auto Scale</string>
+
+    <string name="actionToggleLineValues">Toggle Line Values</string>
+    <string name="actionToggleBarValues">Toggle Bar Values</string>
+    <string name="actionToggleBarBorders">Toggle Bar Borders</string>
+    <string name="actionToggleFilled">Toggle Filled</string>
+    <string name="actionToggleCircles">Toggle Circles</string>
+    <string name="actionToggleCandleShadow">Toggle Shadow Color</string>
+
+    <string name="actionToggleCubic">Toggle Cubic</string>
+    <string name="actionToggleStepped">Toggle Stepped</string>
+    <string name="actionToggleHorizontalCubic">Toggle Horizontal Cubic</string>
+
+    <string name="actionAddEntry">Add Entry</string>
+    <string name="actionFeedMultiple">Add Multiple</string>
+    <string name="actionRemoveEntry">Remove Entry</string>
+    <string name="actionAddDataSet">Add Data Set</string>
+    <string name="actionRemoveDataSet">Remove Data Set</string>
+    <string name="actionClearChart">Clear chart</string>
+
+    <string name="actionTogglePercent">Toggle Percent</string>
+    <string name="actionToggleMinAngles">Toggle Minimum Angles</string>
+    <string name="actionToggleHole">Toggle Hole</string>
+    <string name="actionToggleCurvedSlices">Toggle Curved Slices</string>
+    <string name="actionDrawCenterText">Draw Center Text</string>
+    <string name="actionToggleHighlightCircle">Toggle Highlight Circle</string>
+    <string name="actionToggleRotation">Toggle Rotation</string>
+    <string name="actionToggleSpin">Spin Animation</string>
+
+    <string name="dash">-</string>
+    <string name="scrollViewStart">START OF SCROLLVIEW</string>
+    <string name="scrollViewEnd">END OF SCROLLVIEW</string>
+</resources>

@@ -1,0 +1,28 @@
+﻿@model CommunityApp.ViewModels.MessageListPageVM
+
+@{
+    ViewData["Title"] = "Messages from " + Model.Sender;
+}
+
+<h1>Messages from @Model.Sender</h1>
+
+<div>
+    <dl class="row">
+        @foreach (var item in Model.Messages)
+        {
+            <dd class="col-sm-12">
+                @if (item.Unread)
+                {
+                    <a asp-action="Details" asp-route-id="@item.Id">@item.Created.ToLongDateString() - <b>@item.Title</b></a> <span>[New!]</span>
+                }
+                else
+                {
+                    <a asp-action="Details" asp-route-id="@item.Id">@item.Created.ToLongDateString() - @item.Title</a>
+                }
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to senders</a>
+</div>

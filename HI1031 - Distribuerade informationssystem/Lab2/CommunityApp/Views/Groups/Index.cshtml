@@ -1,0 +1,42 @@
+﻿@model CommunityApp.ViewModels.GroupIndexVM 
+
+@{
+    ViewData["Title"] = "Groups";
+}
+
+<h1>Groups</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in Model.Groups) {
+            <tr>
+                <td>
+                    <span>@group.Name</span>
+                    <span>(</span>
+                    @for (int i = 0; i < group.MemberUsernames.Count(); i++)
+                    {
+                        <span>@group.MemberUsernames[i]</span>
+                    }
+                    <span>)</span>
+
+                    &nbsp;
+                    &nbsp;
+
+                    @if (!group.MemberUsernames.Contains(Model.Username))
+                    {
+                        <a asp-action="Join" asp-route-id="@group.Id">Join</a>
+                    }
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

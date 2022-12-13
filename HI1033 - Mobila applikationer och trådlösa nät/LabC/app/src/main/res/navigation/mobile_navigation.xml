@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_course">
+
+    <fragment
+        android:id="@+id/navigation_course"
+        android:name="com.example.labb3ctimesl.fragments.CourseFragment"
+        android:label="@string/title_course"
+        tools:layout="@layout/fragment_courses" />
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.example.labb3ctimesl.fragments.ScheduleFragment"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_travel"
+        android:name="com.example.labb3ctimesl.fragments.TripFragment"
+        android:label="@string/title_travel"
+        tools:layout="@layout/fragment_travel" />
+</navigation>

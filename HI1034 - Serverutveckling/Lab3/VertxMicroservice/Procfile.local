@@ -1,0 +1,1 @@
+web: java -jar target/VertxMS-1.0.0-SNAPSHOT-fat.jar -Dheroku=false
